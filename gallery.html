@@ -1,0 +1,140 @@
+<html>
+
+<head>
+	<title> My Gallery </title>
+	<link rel = "stylesheet" href = "css/gallery.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+	<header>
+		<nav>
+			<div class = "logo">
+				<img src = "images/logo.png" alt = "Logo">
+			</div>
+			
+			<ul class = "menu">
+				<li><a href = "index.html"> Home </a></li>
+				<li><a href = "about_me.html"> About Me </a></li>
+				<li><a href = "education.html"> Education </a></li>
+				<li><a href = "inspiration.html"> Inspiration </a></li>
+				<li><a href = "gallery.html"> My Gallery </a></li>
+			</ul>
+			
+			<div class = "bars">
+				<i class = "ri-menu-2-fill"></i>
+			</div>
+		</nav>
+		
+		<input type = "radio" name = "Photos" id = "gallery1" checked>
+		<input type = "radio" name = "Photos" id = "gallery2">
+		<input type = "radio" name = "Photos" id = "gallery3">
+		<input type = "radio" name = "Photos" id = "gallery4">
+	
+		<div class = "content">
+		
+			<h1> MY PHOTO GALLERY </h1>
+			
+			<div class = "top_content">
+				<label for = "gallery1"> All Photos </label>
+				<label for = "gallery2"> High School </label>
+				<label for = "gallery3"> Collegues </label>
+				<label for = "gallery4"> Family </label>
+			</div>
+		
+			<div class = "gallery">
+			
+				<div class = "pic highschool">
+					<img src = "images/highschool1.jpeg" alt = "High School 1"> 
+				</div>
+				
+				<div class = "pic collegues">
+					<img src = "images/collegues1.jpeg" alt = "Collegues 1">  
+				</div>
+				
+				<div class = "pic family">
+					<img src = "images/family1.jpeg" alt = "Family 1">  
+				</div>
+				
+				<div class = "pic highschool">
+					<img src = "images/highschool2.jpeg" alt = "High School 2"> 
+				</div>
+				
+				<div class = "pic collegues">
+					<img src = "images/collegues2.jpeg" alt = "Collegues 2">  
+				</div>
+				
+				<div class = "pic family">
+					<img src = "images/family2.jpeg" alt = "Family 2"> 
+				</div>
+				
+				<div class = "pic highschool">
+					<img src = "images/highschool3.jpeg" alt = "High School 3">  
+				</div>
+				
+				<div class = "pic collegues">
+					<img src = "images/collegues3.jpeg" alt = "Collegues 3"> 
+				</div>
+				
+				<div class = "pic family">
+					<img src = "images/family3.jpeg" alt = "Family 3"> 
+				</div>
+				
+				<div class = "pic highschool">
+					<img src = "images/highschool4.jpeg" alt = "High School 4"> 
+				</div>
+				
+				<div class = "pic collegues">
+					<img src = "images/collegues4.jpeg" alt = "Collegues 4"> 
+				</div>
+				
+				<div class = "pic family">
+					<img src = "images/family4.jpeg" alt = "Family 4"> 
+				</div>
+				
+			</div>
+		</div>
+	</header>
+	
+	<div class = "content2">
+		<h1> MY VIDEO GALLERY </h1>
+		
+		<div class = "container">
+			<div class = "video-container">
+			
+				<div class = "video-list">
+					<video class = "active" src = "images/video1.mov" muted></video>
+					<video src = "images/video2.mov" muted></video>
+					<video src = "images/video3.mov" muted></video>
+					<video src = "images/video4.mov" muted></video>
+					<video src = "images/video5.mov" muted></video>
+				</div>
+				
+				<div class = "main-video">
+					<video src = "images/video1.mov" muted controls></video>
+				</div>
+	
+			</div>
+		</div>
+	
+		<script>
+			$(document).ready(function(){
+				$('.video-list video').click(function(){
+					$(this).addClass('active').siblings().removeClass('active');
+					
+					let src = $(this).attr('src')
+					$('.main-video video').attr('src',src);
+				});
+			});
+		</script>
+	
+		<div class = "sound">
+			<audio controls autoplay loop> 
+			<source src = "songs/song.mp3" type="audio/mpeg"></audio>
+		</div>
+	</div>
+	
+</body>
+
+</html>
