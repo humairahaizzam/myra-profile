@@ -1,0 +1,164 @@
+<html>
+
+<head>
+	 <meta charset = "UTF-8">
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+	<title> My Inspiration </title>
+	<link rel = "stylesheet" href = "css/inspiration.css">
+	<script src = "https://kit.fontawesome.com/44f557ccce.js"></script>
+</head>
+
+<body>
+
+	<div class = "background-img"></div>
+	
+	<header>
+		<nav>
+			<div class = "logo">
+				<img src = "images/logo.png" alt = "Logo">
+			</div>
+			
+			<ul class = "menu">
+				<li><a href = "index.html"> Home </a></li>
+				<li><a href = "about_me.html"> About Me </a></li>
+				<li><a href = "education.html"> Education </a></li>
+				<li><a href = "inspiration.html"> Inspiration </a></li>
+				<li><a href = "gallery.html"> My Gallery </a></li>
+			</ul>
+			
+			<div class = "bars">
+				<i class = "ri-menu-2-fill"></i>
+			</div>
+		</nav>
+		
+		<div class = "content">
+			<h1> MY INSPIRATION </h1>
+		</div>
+		
+		<section id = "section1">
+			<div class = "my_img">
+				<img src = "images/ctdk.png" alt = "Siti Nurhaliza">
+			</div>
+			<div class = "my_content">
+				<h2 class = "glow"> SITI NURHALIZA </h2>
+				<p> Siti Nurhaliza binti Tarudin or known as <abbr title = "Siti Nurhaliza"> CTDK </abbr> is an inspiring idol, known for her incredible talent, hard work, and humility. From humble beginnings in Temerloh, Pahang, she rose &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp; to global fame while staying connected to her roots. </p>
+				<i> "Happiness paves the golden road to every kind of success." </i>
+				<h3> ─ <abbr title="Siti Nurhaliza">CTDK</abbr></h3>
+			</div>
+			
+			<a href= "#section2">
+				<div class="scroll-down"></div>
+			</a>
+		</section>
+
+		<section id = "section2">
+			<div class = "my_content2">
+				<p>Her music touches hearts, and her generosity and grace make her a true role model. </p>
+			</div>
+			
+			<div class = "music-players">
+				
+				<div class = "music-player">
+					<img src = "images/akucintapadamu.jpg" class = "song-img" alt = "Aku Cinta Padamu">
+					<h2> Aku Cinta Padamu </h2>
+					<p> Siti Nurhaliza </p>
+					
+					<audio id = "song1">
+						<source src = "songs/akucintapadamu.mp3" type = "audio/mpeg">
+					</audio>
+					
+					<input type="range" value="0" id="progress1" class="progress-bar">
+					
+					<div class = "controls">
+						<div><i class = "fa fa-backward"></i></div>
+						<div onclick = "playPause('song1', 'ctrlIcon1')"><i class="fa fa-play" id = "ctrlIcon1"></i></div>
+						<div><i class="fa fa-forward"></i></div>
+					</div>
+				</div>
+				
+				<div class = "music-player">
+					<img src = "images/muarahati.jpg" class = "song-img" alt = "Muara Hati">
+					<h2> Muara Hati </h2>
+					<p> Siti Nurhaliza & Hafiz Suip </p>
+					
+					<audio id = "song2">
+						<source src = "songs/muarahati.mp3" type = "audio/mpeg">
+					</audio>
+					
+					<input type="range" value="0" id="progress2" class="progress-bar">
+					
+					<div class = "controls">
+						<div><i class="fa fa-backward"></i></div>
+						<div onclick = "playPause('song2', 'ctrlIcon2')"><i class="fa fa-play" id = "ctrlIcon2"></i></div>
+						<div><i class="fa fa-forward"></i></div>
+					</div>
+				</div>
+				
+				<div class = "music-player">
+					<img src = "images/airmataibu.jpg" class = "song-img" alt = "Air Mata Ibu">
+					<h2> Air Mata Ibu </h2>
+					<p> Siti Nurhaliza </p>
+					
+					<audio id = "song3">
+						<source src = "songs/airmataibu.mp3" type = "audio/mpeg">
+					</audio>
+					
+					<input type="range" value="0" id="progress3" class="progress-bar">
+					
+					<div class = "controls">
+						<div><i class="fa fa-backward"></i></div>
+						<div onclick = "playPause('song3', 'ctrlIcon3')"><i class="fa fa-play" id = "ctrlIcon3"></i></div>
+						<div><i class="fa fa-forward"></i></div>
+					</div>
+				</div>
+				
+			</div>
+		
+		<script>
+			let progress = document.getElementById("progress");
+			let song = document.getElementById("song");
+			let ctrlIcon = document.getElementById("ctrlIcon");
+			
+			song.onloadedmetadata = function(){
+				progress.max = song.duration;
+				progress.value = song.currentTime;
+			}
+			
+			function playPause(songId, iconId) {
+			  let song = document.getElementById(songId);
+			  let ctrlIcon = document.getElementById(iconId);
+			  let progressBar = document.getElementById(`progress${songId.slice(-1)}`);
+
+			  if (ctrlIcon.classList.contains("fa-pause")) {
+				song.pause();
+				ctrlIcon.classList.remove("fa-pause");
+				ctrlIcon.classList.add("fa-play");
+			  } else {
+				song.play();
+				ctrlIcon.classList.add("fa-pause");
+				ctrlIcon.classList.remove("fa-play");
+				updateProgress(song, progressBar);
+			  }
+			}
+
+			function updateProgress(song, progressBar) {
+			  song.ontimeupdate = () => {
+				const progress = (song.currentTime / song.duration) * 100;
+				progressBar.value = progress;
+				progressBar.style.background = `linear-gradient(90deg, #7F6244 ${progress}%, #ddd ${progress}%)`;
+			  };
+
+			  progressBar.oninput = () => {
+				song.currentTime = (progressBar.value / 100) * song.duration;
+				progressBar.style.background = `linear-gradient(90deg, #7F6244 ${progressBar.value}%, #ddd ${progressBar.value}%)`;
+			  };
+			}
+		</script>
+		
+		</section>
+
+	</header>
+	
+</body>
+
+</html>
