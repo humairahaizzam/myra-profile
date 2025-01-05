@@ -1,0 +1,405 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body{
+    overflow-x: hidden;
+    background-color: #7F6244;
+	#3D2B1F
+}
+
+header{
+    width: 100%;
+    padding: 80px;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    height: 70px;
+    padding: 0 3%;
+    border-radius: 50px;
+    border: 4px solid #3D2B1F;
+    position: fixed;
+    top: 3%;
+    left: 10%;
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+    z-index: 100;
+}
+
+img{
+    width: 130%;
+    height: 100%;
+}
+
+input{
+    display: none;
+}
+
+.menu{
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.menu li a{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #7F6244;
+    transition: 0.3s;
+}
+
+.menu li a:hover{
+    color: white;
+}
+
+.bars{
+    display: none;
+}
+
+.content{
+    width: 100%;
+    text-align: center;
+}
+
+h1{
+    font-weight: bold;
+    font-size: 40px;
+    top: 1%;
+    position: relative;
+    margin: 40px 0;
+    color: #3D2B1F;
+    background-color: transparent;
+}
+
+h1::before{
+    content: '';
+    position: absolute;
+    width: 200px;
+    height: 3px;
+    background-color: #EFDECD;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%); 
+    animation: animate 3s linear infinite;
+    justify-content: space-around;
+}
+
+@keyframes animate{
+    0% {
+        width: 10px;
+    }
+    50% {
+        width: 430px;
+    }
+    100% {
+        width: 10px;
+    }
+}
+
+.top_content{
+    background-color: #EFDECD;
+    width: 46%;
+    margin: 0 auto 20px auto;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    justify-content: space-around;
+    box-shadow: 3px 3px 5px lightgray;
+}
+
+label{
+    display: inline-block;
+    padding: 30px 30px;
+    text-align: center;
+    margin: 0 20px;
+    background-color: #3D2B1F;
+    color: white;
+    font-size: 15px; /* Corrected font-size property */
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.4s;
+    border: none;
+    border-radius: 15px;
+    outline: none;
+    cursor: pointer;
+}
+
+label:hover{
+    background-color: #EFDECD;
+    font-size: 15px;
+    font-weight: 850;
+    color: #3D2B1F;
+}
+
+.gallery{
+    width: 70%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 25px;
+}
+
+.pic{
+    position: relative;
+    height: 230px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px #3D2B1F;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.pic img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+.pic::before{
+    content: "MY GALLERY";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    width: 100%;
+    margin-top: -100px;
+    opacity: 0;
+    transition: 0.3s;
+    transition-delay: 0.2s;
+    z-index: 1;
+}
+
+.pic.highschool::before{
+    content: "MY HIGHSCHOOL";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #3D2B1F;
+    font-size: 20px;
+    font-weight: bold;
+    width: 100%;
+    margin-top: -100px;
+    opacity: 0;
+    transition: 0.3s;
+    transition-delay: 0.2s;
+    z-index: 1;
+}
+
+.pic.highschool::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    border-radius: 10px;
+    height: 0;
+    background: rgba(245,222,179, 0.7);
+    transition: 0.3s;
+}
+
+.pic.collegues::before{
+    content: "MY COLLEGUES";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #3D2B1F;
+    font-size: 20px;
+    font-weight: bold;
+    width: 100%;
+    margin-top: -100px;
+    opacity: 0;
+    transition: 0.3s;
+    transition-delay: 0.2s;
+    z-index: 1;
+}
+
+.pic.collegues::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    border-radius: 10px;
+    height: 0;
+    background: rgba(245,222,179, 0.7);
+    transition: 0.3s;
+}
+
+.pic.family::before{
+    content: "MY FAMILY";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #3D2B1F;
+    font-size: 20px;
+    font-weight: bold;
+    width: 100%;
+    margin-top: -100px;
+    opacity: 0;
+    transition: 0.3s;
+    transition-delay: 0.2s;
+    z-index: 1;
+}
+
+.pic.family::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    border-radius: 10px;
+    height: 0;
+    background: rgba(245,222,179, 0.7);
+    transition: 0.3s;
+}
+
+.pic:hover::before{
+    margin-top: 0;
+    opacity: 1;
+}
+
+.pic:hover::after{
+    height: 100%;
+}
+
+#gallery1:checked~.content .gallery .pic{
+    opacity: 1;
+    transform: scale(1);
+    position: relative;
+    transition: 0.5s;
+}
+
+#gallery2:checked~.content .gallery .highschool{
+    transform: scale(1);
+    opacity: 1;
+    position: relative;
+}
+
+#gallery2:checked~.content .gallery .collegues,
+#gallery2:checked~.content .gallery .family{
+    transform: scale(0);
+    opacity: 0;
+    position: absolute;
+    transition: 0s;
+}
+
+#gallery3:checked~.content .gallery .collegues{
+    transform: scale(1);
+    opacity: 1;
+    position: relative;
+}
+
+#gallery3:checked~.content .gallery .family,
+#gallery3:checked~.content .gallery .highschool{
+    transform: scale(0);
+    opacity: 0;
+    position: absolute;
+    transition: 0s;
+}
+
+#gallery4:checked~.content .gallery .family{
+    transform: scale(1);
+    opacity: 1;
+    position: relative;
+}
+
+#gallery4:checked~.content .gallery .highschool,
+#gallery4:checked~.content .gallery .collegues{
+    opacity: 0;
+    transform: scale(0);
+    position: absolute;
+    transition: 0s;
+}
+
+.content2{
+    position: relative;
+    min-height: 80vh;
+    width: 100%;
+    text-align: center;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    bottom: 3vh;
+    height: 80vh;
+    width: 100%;
+    text-align: center;
+}
+
+.video-container{
+    width: 100%;
+    text-align: center;
+    height: 630px;
+    width: 1200px;
+    display: flex;
+}
+
+.video-container .video-list{
+    width: 20%;
+    padding: 10px;
+    padding-right: 0;
+}	
+
+.video-container .video-list video{
+    border-radius: 40px;
+    height: 110px;
+    width: 100%;
+    object-fit: cover;
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.video-container .video-list video.active,
+.video-container .video-list video:hover{
+    border-radius: 10px;
+    background: #EFDECD;
+    box-shadow: 0 0 0 4px #3D2B1F inset;
+}
+
+.video-container .main-video{
+    width: 95%;
+    height: 610px;
+    padding: 35px;
+}
+
+.video-container .main-video video{
+    border-radius: 20px;
+    height: 100%;
+    width: 100%;
+    outline: none;
+    padding: 10px;
+    background: #EFDECD;
+    box-shadow: 0 0 0 6px #3D2B1F inset;
+}
+
+.sound{
+    display: none;
+}
