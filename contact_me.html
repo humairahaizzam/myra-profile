@@ -1,0 +1,92 @@
+<html>
+
+<head>
+	<meta charset = "UTF-8">
+	<meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+	<title> Contact Me </title>
+	<link rel="stylesheet" href="css/contact_me.css">
+</head>
+
+<body>
+	<div class = "container">
+    
+		<div class = "title"> Let's Keep In Touch! </div>
+		<div class = "content">
+	
+			<form>
+				<div class = "user-details">
+          
+					<div class = "input-box">
+						<label class = "details"> Full Name </label>
+						<input type = "text" id = "full-name" name = "full-name" placeholder = "Enter your name" required>
+					</div>
+          
+					<div class = "input-box">
+						<label class = "details"> Phone Number </span>
+						<input type = "text" id = "phone-number" name = "phone-number" placeholder = "Enter your number" required>
+					</div>
+          
+				</div>
+				
+				<div class = "gender-details">
+				
+					<input type = "radio" name = "gender" id = "dot-1" value = "male">
+					<input type = "radio" name = "gender" id = "dot-2" value = "female">
+					<input type = "radio" name = "gender" id = "dot-3" value = "prefer-not-to-say">
+					<span class = "gender-title">Gender</span>
+					
+					<div class = "category">
+            
+						<label for = "dot-1">
+							<span class = "dot one"></span>
+							<span class = "gender"> Male </span>
+						</label>
+            
+						<label for = "dot-2">
+							<span class = "dot two"></span>
+							<span class = "gender"> Female </span>
+						</label>
+			
+						<label for = "dot-3">
+							<span class = "dot three"></span>
+							<span class = "gender"> Prefer not to say </span>
+						</label>
+            
+					</div>
+				</div>
+		  
+				<div class="state-details">
+					<label class="state-title"> Your state </label>
+					
+					<div class = "states">
+						<select id = "state" name = "state" class = "state" required>
+							<option value = ""> Select a state </option>
+							<option value = "Johor"> Johor </option>
+							<option value = "Kedah"> Kedah </option>
+							<option value = "Kelantan"> Kelantan </option>
+							<option value = "Kuala Lumpur"> Kuala Lumpur </option>
+							<option value = "Melaka"> Melaka </option>
+							<option value = "Negeri Sembilan"> Negeri Sembilan </option>
+							<option value = "Pahang"> Pahang </option>
+							<option value = "Penang"> Penang </option>
+							<option value = "Perak"> Perak </option>
+							<option value = "Perlis"> Perlis </option>
+							<option value = "Sabah"> Sabah </option>
+							<option value = "Sarawak"> Sarawak </option>
+							<option value = "Selangor"> Selangor </option>
+							<option value = "Terengganu"> Terengganu </option>
+						</select>
+						<div class ="arrow"></div>
+					</div>
+				</div>
+        
+				<div class="button">
+					<input type="submit" value="Submit">
+				</div>
+			</form>
+		</div>
+	</div>
+	
+</body>
+
+</html>
