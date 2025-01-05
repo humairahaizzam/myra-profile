@@ -1,0 +1,260 @@
+<html>
+
+<head>
+	<meta charset = "UTF-8">
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+	<title> About Me </title>
+	<link rel = "stylesheet" href = "css/about_me.css">
+	<script src = "https://kit.fontawesome.com/44f557ccce.js"></script>
+</head>
+
+<body>
+
+	<header>
+		<nav>
+			<div class = "logo">
+				<img src = "images/logo.png" alt = "Logo">
+			</div>
+			
+			<ul class = "menu">
+				<li><a href = "index.html"> Home </a></li>
+				<li><a href = "about_me.html"> About Me </a></li>
+				<li><a href = "education.html"> Education </a></li>
+				<li><a href = "inspiration.html"> Inspiration </a></li>
+				<li><a href = "gallery.html"> My Gallery </a></li>
+			</ul>
+			
+			<div class = "bars">
+				<i class = "ri-menu-2-fill"></i>
+			</div>
+		</nav>
+	
+		<div class = "content">
+			<h1> ABOUT HUMAIRA </h1>
+		</div>
+		
+		<section class = "section1">
+			<div class = "row">
+			
+				<div class = "video-container">
+					<video src = "images/myvideo.mov" loop autoplay muted></video>
+					<h3> Who am i? </h3>
+				</div>
+				
+				<div class = "content1">
+					<div class = "about-left">
+						<h1><i> "How you love yourself is how you teach others to love you." </i></h1>
+						<p> &nbsp; </p>
+						<p> Assalamualaikum and Hello... </p>
+						<p> I am Nur Batrisyia Humaira, from Petaling Jaya, Selangor. I am currently in my final semester studying Information Management at UiTM Rembau. </p>
+						<p> I enjoy singing and baking, and I love exploring new things. Being the second of five siblings has taught me to be responsible and flexible. </p>
+						<p> I am excited to start my career soon and see where life takes me! </p>
+						<h3><b> Humaira Haizzam </b></h3>
+						<img src = "images/signature.png" alt = "Signature">
+						<div class = "button">
+							<li><a href = "contact_me.html"> Contact Me </a></li>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		</section>
+		
+		<section class = "section2">
+			<h3> MY HOBBY </h3>
+		
+			<div class = "slideshow-container">
+				<div class = "mySlides fade">
+					<div class = "numbertext"> 1 / 4 </div>
+					<img src = "images/hobby1.jpeg" alt = "Karaoke">
+					<h1> Karaoke </h1>
+					<div class = "text"> I love karaoke because it’s the perfect mix of fun, music, and memories. Singing my heart out, no matter how it sounds, always makes me feel alive! </div>
+				</div>
+			
+				<div class = "mySlides fade">
+					<div class = "numbertext"> 2 / 4 </div>
+					<img src = "images/hobby2.jpeg" alt = "Cooking">
+					<h1> Cooking </h1>
+					<div class = "text"> Cooking is where creativity meets comfort and a way to explore flavors, unwind, and share love through every dish I make. </div>
+				</div>
+				
+				<div class = "mySlides fade">
+					<div class = "numbertext"> 3 / 4 </div>
+					<img src = "images/hobby3.jpeg" alt = "Baking">
+					<h1> Baking </h1>
+					<div class = "text"> Baking allows me to explore my creativity, unwind from daily stresses, and find joy in crafting something special. It’s about the process, the aroma filling the kitchen, and the satisfaction of seeing the finished product. </div>
+				</div>
+				
+				<div class = "mySlides fade">
+					<div class = "numbertext"> 4 / 4 </div>
+					<img src = "images/hobby4.jpeg" alt = "Sleeping">
+					<h1> Sleeping </h1>
+					<div class = "text"> Sleeping is my time to recharge, rest, and reset. It’s the perfect way to unwind and refresh for the day ahead. </div>
+				</div>
+			
+				<a class = "prev" onclick = "plusSlides(-1)">&#10094;</a>
+				<a class = "next" onclick = "plusSlides(1)">&#10095;</a>
+			</div>
+			
+			<br>
+			
+			<div style = "text-align:center">
+				<span class = "dot" onclick = "currentSlide(1)"></span>
+				<span class = "dot" onclick = "currentSlide(2)"></span>
+				<span class = "dot" onclick = "currentSlide(3)"></span>
+				<span class = "dot" onclick = "currentSlide(4)"></span>
+			</div>
+			
+			<script>
+				let slideIndex = 1;
+				showSlides(slideIndex);
+
+				function plusSlides(n) {
+				  showSlides(slideIndex += n);
+				}
+
+				function currentSlide(n) {
+				  showSlides(slideIndex = n);
+				}
+
+				function showSlides(n) {
+					let i;
+					let slides = document.getElementsByClassName("mySlides");
+					let dots = document.getElementsByClassName("dot");
+					if (n > slides.length) {slideIndex = 1}
+					if (n < 1) {slideIndex = slides.length}
+					for (i = 0; i < slides.length; i++) {
+						slides[i].style.display = "none";  
+					}
+					for (i = 0; i < dots.length; i++) {
+						dots[i].className = dots[i].className.replace("active", "");
+					}
+					slides[slideIndex-1].style.display = "block";
+					dots[slideIndex-1].className += " active";
+				}
+			</script>
+		
+			<div class = "button">
+				<a href = "#" class = "btn"> Back Up </a>
+			</div>	
+		</section>
+		
+		<section class = "section3">
+			<div class = "row">
+			
+				<div class = "image-container3">
+					<img src = "images/myskill.jpeg" alt = "My Skills"></img>
+					<h3> My Skills </h3>
+				</div>
+				
+				<div class = "skills-section">
+					<div class = "what"> ACADEMIC SKILLS </div>
+					<div class = "skill-container">
+						<div class = "skill s1 load"><span> 65% </span></div>
+					</div>
+						
+					<div class = "what"> INTERPERSONAL SKILLS </div>
+					<div class = "skill-container">
+						<div class = "skill s2 load"><span> 70% </span></div>
+					</div>
+					
+					<div class = "what"> LEADERSHIP AND MANAGEMENT SKILLS </div>
+					<div class = "skill-container">
+						<div class = "skill s3 load"><span> 85% </span></div>
+					</div>
+					
+					<div class = "what"> TECHNICAL SKILLS </div>
+					<div class = "skill-container">
+						<div class = "skill s4 load"><span> 80% </span></div>
+					</div>
+					
+					<div class = "what"> PERSONAL DEVELOPMENT SKILLS </div>
+					<div class = "skill-container">
+						<div class = "skill s5 load"><span> 50% </span></div>
+					</div>
+					
+					<div class = "what"> ENTERTAINMENT SKILLS </div>
+					<div class = "skill-container">
+						<div class = "skill s6 load"><span> 60.7% </span></div>
+					</div>
+				</div>
+				
+				<div class = "button">
+					<a href = "#" class = "btn"> Back Up </a>
+				</div>
+			
+			</div>
+		</section>
+		
+		<div class = "rev-section">
+			<h2 class = "glow"> Me, Through Their Lens </h2>
+			<p class = "note"> What I have learned from hearing their thoughts and how it is helped me grow. </p>
+
+			<div class = "reviews">
+			
+				<div class = "review">
+					<div class = "head-review">
+						<img src = "images/hani.jpg" alt = "Nurul Hani">
+					</div>
+					
+					<div class = "body-review">
+						<div class = "name-review"><b> Nurul Hani </b></div>
+						<div class = "rating">
+							<span class = "fas fa-star checked"></span>
+							<span class = "fas fa-star checked"></span>
+							<span class = "fas fa-star checked"></span>
+							<span class = "fas fa-star checked"></span>
+							<span class = "fas fa-star checked"></span>
+						</div>
+						<div class = "desc-review"> "She is a creative individual with approachable personality. Her dedication to her passions in academics or personal growth, reflects her drive for excellence." </div>
+					</div>
+				</div>
+				
+				<div class = "review">
+					<div class = "head-review">
+						<img src = "images/juliza.jpg" alt = "Juliza Ali">
+					</div>
+					
+					<div class = "body-review">
+						<div class = "name-review"><b> Juliza Ali </b></div>
+						<div class = "rating">
+							<i class = "fas fa-star"></i>
+							<i class = "fas fa-star"></i>
+							<i class = "fas fa-star"></i>
+							<i class = "fas fa-star"></i>
+							<i class = "fas fa-star-half"></i>
+						</div>
+						<div class = "desc-review"> "Humaira is a dazzling firework of beauty, ambition, and energy. She works harder than anyone, shines bright in everything she does, and brings fun wherever she goes." </div>
+					</div>
+				</div>
+				
+				<div class = "review">
+					<div class = "head-review">
+						<img src = "images/nina.jpg" alt = "Siti Zuhazriana">
+					</div>
+					
+					<div class = "body-review">
+						<div class = "name-review"><b> Siti Zuhazriana </b></div>
+						<div class = "rating">
+							<i class = "fas fa-star"></i>
+							<i class = "fas fa-star"></i>
+							<i class = "fas fa-star"></i>
+							<i class = "fas fa-star"></i>
+							<i class = "fas fa-star"></i>
+						</div>
+						<div class = "desc-review"> "She’s beautiful  inside and out,  inspiring others with her kind heart. Her confidence shines, and as a loyal friend, she’s always there to listen and support." </div>
+					</div>
+				</div>
+				
+			</div>
+			
+			<p> &nbsp; </p>
+			<a href = "#" class = "btn"> Back Up </a>
+
+		</div>
+		
+	</header>
+	
+</body>
+
+</html>
